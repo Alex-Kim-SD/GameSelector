@@ -1,0 +1,5 @@
+.gamesArray-list {
+  display: flex;
+  max-width: 800px;
+  /* overflow: scroll; */
+}
