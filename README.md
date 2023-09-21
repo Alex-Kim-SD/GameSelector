@@ -8,11 +8,14 @@ If setting up, make sure to run correct backend and frontend appropriate npm ins
 ## Setup Steps:
 
 1. Create Dir
+
 => Create GameSelector Dir
 => mkdir backend
 => cd backend
 KEY STEP => npm install express mongoose cors bcrypt jsonwebtoken
+
 2. Create index.js file @ /backend/index.js
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -33,7 +36,9 @@ mongoose.connect('mongodb://localhost:27017/myGameApp', {
 app.listen(5000, () => {
   console.log('Server running on http://localhost:5000');
 });
-2. Create model dir and 'user.js' and 'game.js' models
+
+3. Create model dir and 'user.js' and 'game.js' models
+
 // User.js
 const mongoose = require('mongoose');
 
@@ -54,7 +59,9 @@ const GameSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Game', GameSchema);
-3. Create 'routes' directory and 'userRoutes.js' and 'gameRoutes.js'
+
+4. Create 'routes' directory and 'userRoutes.js' and 'gameRoutes.js'
+
 //userRoutes
 const express = require('express');
 const User = require('../models/User');
@@ -77,17 +84,22 @@ const router = express.Router();
 // ...
 
 module.exports = router;
-4. Set up your front end
+
+5. Set up your front end
 Go back to your my-game-app directory and run:
 npx create-react-app frontend
 cd frontend
 npm install axios
-5. Create components such as Login.js, Register.js, Dashboard.js, and
-6. Set up React Router, run:
+
+6. Create components such as Login.js, Register.js, Dashboard.js, and
+
+7. Set up React Router, run:
 npm install react-router-dom
-7. Use Axios for API Calls
+
+8. Use Axios for API Calls
 Use Axios to make API calls to your Express backend for user authentication and game operations.
-8. Set up Statemanagement Use React's useState and useEffect hooks for state management.
+
+9. Set up Statemanagement Use React's useState and useEffect hooks for state management.
 
 
 ## Basic template login, game addition and game add
