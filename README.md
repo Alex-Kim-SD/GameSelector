@@ -2,15 +2,16 @@
 
 Having trouble picking a game? Use this app to add to and adjust your game selection, and our app will randomly select one for you to play!
 
-## Setup Steps:
 
-### Backend Setup:
+If setting up, make sure to run correct backend and frontend appropriate npm installs!
+
+## Setup Steps:
 
 1. Create Dir
 => Create GameSelector Dir
 => mkdir backend
 => cd backend
-=> npm install express mongoose cors bcrypt jsonwebtoken
+KEY STEP => npm install express mongoose cors bcrypt jsonwebtoken
 2. Create index.js file @ /backend/index.js
 const express = require('express');
 const cors = require('cors');
@@ -151,4 +152,3 @@ const pickRandomGame = () => {
   const randomGame = games[randomIndex];
   // Do something with randomGame
 }
-
